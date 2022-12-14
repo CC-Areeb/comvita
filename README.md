@@ -63,7 +63,7 @@ If you have chosen to opt for the auth package the you must go inside `views/lay
 + Inside you main root directory of your laravel app install the laravel mix `npm init -y` and then run `npm install laravel-mix --save-dev` .
 + Create a Mix Configuration File `touch webpack.mix.js` .
 + Define Your Compilation.
-+ Vite may be buggy when it comes to compiling both react and bootstrap, so for that reason I opted to use the `.js` as the extension and use webpack to compile the JavaScript.
++ Vite may be buggy when it comes to compiling both react and bootstrap, so for that reason I opted to use use webpack to compile JavaScript.
 ```
 // webpack.mix.js
 
