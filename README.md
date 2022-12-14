@@ -59,13 +59,6 @@ If you have chosen to opt for the auth package the you must go inside `views/lay
 #### In the end run the `npm install && npm run build` to build your assets and start your local server.
 ---
 
-
-### Follow the steps to install bootstrap 5 with vite in your laravel app
-+ Install the laravel ui by using `composer require laravel/ui` .
-+ Now we will install react by using `php artisan ui react`. Similarly to bootstrap, you can also give the `--auth` flag to install the authentication scaffolfing made in react
-+ Make sure you have node version 18 or above at this point in time before you run `npm install && npm run dev` .
----
-
 ## Installing laravel mix 
 + Inside you main root directory of your laravel app install the laravel mix `npm init -y` and then run `npm install laravel-mix --save-dev` .
 + Create a Mix Configuration File `touch webpack.mix.js` .
