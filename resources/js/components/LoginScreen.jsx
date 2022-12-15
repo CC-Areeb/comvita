@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 export default function LoginScreen() {
     let formStyles = {
@@ -36,7 +35,4 @@ export default function LoginScreen() {
             </div>
         </>
     )
-}
-if (document.getElementById('login_screen')) {
-    ReactDOM.render(<LoginScreen />, document.getElementById('login_screen'));
 }
