@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
-import ReactDOM from 'react-dom';
 
 class ApexChart extends Component {
     constructor(props) {
@@ -46,7 +45,7 @@ class ApexChart extends Component {
                 {
                     name: "ordered",
                     type: "line",
-                    data: [30, 40, 25, 50, 49, 21, 70, 51]
+                    data: [30, 40, 25, 50, 49, 21, 70, 51],
                 },
                 {
                     name: "purchased",
@@ -242,7 +241,7 @@ class ApexChart extends Component {
                             series={this.state.seriesMixedChart}
                             type="line"
                             width="500"
-                        />
+                        />  
                     </div>
 
                     <div className="col radial-chart">
@@ -254,7 +253,6 @@ class ApexChart extends Component {
                         />
                     </div>
                 </div>
-
                 <div className="row">
                     <div className="col percentage-chart">
                         <Chart
@@ -265,17 +263,14 @@ class ApexChart extends Component {
                             width={500}
                         />
                     </div>
-
-                    <p className="col">
-                        <button className="btn btn-outline-success fs-4" onClick={this.updateCharts}>Update!</button>
-                    </p>
+                    <div className="text-center">
+                        <p className="col">
+                            <button className="btn btn-dark fs-4" onClick={this.updateCharts}>Update!</button>
+                        </p>
+                    </div>
                 </div>
             </div>
         );
     }
 }
 export default ApexChart;
-
-// if (document.getElementById('apexChart')) {
-//     ReactDOM.render(<ApexChart />, document.getElementById('apexChart'));
-// }

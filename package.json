@@ -29,6 +29,7 @@
     "dependencies": {
         "apexcharts": "^3.36.3",
         "asynckit": "^0.4.0",
+        "bootstrap-icons": "^1.10.2",
         "combined-stream": "^1.0.8",
         "delayed-stream": "^1.0.0",
         "esbuild": "^0.15.18",

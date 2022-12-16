@@ -1,16 +1,13 @@
 import React from 'react';
-import Example from './Example';
-import Navbar from './Navbar';
+import ApexChart from './ApexChart';
 
-export default function Dashboard() {
+export default function Dashboard(props) {
     return (
         <>
-            <Navbar link="test">
-                <Example />
-            </Navbar>
             <div className="text-center mt-4">
                 <h1 className="text-primary">Dashboard</h1>
                 <h3 className="text-success">View Stats</h3>
+                <ApexChart />
             </div>
         </>
     )

@@ -1,91 +1,145 @@
 import React from 'react'
+import Dashboard from './Dashboard'
+import Navbar from './Navbar'
 
 export default function Sidebar() {
+
+    let hoverStyle = {
+        //
+    }
+
     return (
         <div>
             <div className="container-fluid">
                 <div className="row flex-nowrap">
                     <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
                         <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                            <a href="/" className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                                <span className="fs-5 d-none d-sm-inline">Menu</span>
-                            </a>
-                            <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                                <li className="nav-item">
-                                    <a href="#" className="nav-link align-middle px-0">
-                                        <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">Home</span>
+                            <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start mt-4 fs-4" id="menu">
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-speedometer pe-2"></i>
+                                        Dashboard
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#submenu1" data-bs-toggle="collapse" className="nav-link px-0 align-middle">
-                                        <i className="fs-4 bi-speedometer2"></i> <span className="ms-1 d-none d-sm-inline">Dashboard</span> </a>
-                                    <ul className="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                                        <li className="w-100">
-                                            <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Item</span> 1 </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Item</span> 2 </a>
-                                        </li>
-                                    </ul>
+
+                                <li className=''>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-card-list pe-2"></i>
+                                        Manage Products
+                                    </a>
                                 </li>
-                                <li>
-                                    <a href="#" className="nav-link px-0 align-middle">
-                                        <i className="fs-4 bi-table"></i> <span className="ms-1 d-none d-sm-inline">Orders</span></a>
+
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-rocket-takeoff-fill pe-2"></i>
+                                        Manage Codes
+                                    </a>
                                 </li>
-                                <li>
-                                    <a href="#submenu2" data-bs-toggle="collapse" className="nav-link px-0 align-middle ">
-                                        <i className="fs-4 bi-bootstrap"></i> <span className="ms-1 d-none d-sm-inline">Bootstrap</span></a>
-                                    <ul className="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-                                        <li className="w-100">
-                                            <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Item</span> 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Item</span> 2</a>
-                                        </li>
-                                    </ul>
+
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-search pe-2"></i>
+                                        Manage Code Search
+                                    </a>
                                 </li>
-                                <li>
-                                    <a href="#submenu3" data-bs-toggle="collapse" className="nav-link px-0 align-middle">
-                                        <i className="fs-4 bi-grid"></i> <span className="ms-1 d-none d-sm-inline">Products</span> </a>
-                                    <ul className="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                                        <li className="w-100">
-                                            <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Product</span> 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Product</span> 2</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Product</span> 3</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Product</span> 4</a>
-                                        </li>
-                                    </ul>
+
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-archive-fill pe-2"></i>
+                                        Disable Codes
+                                    </a>
                                 </li>
-                                <li>
-                                    <a href="#" className="nav-link px-0 align-middle">
-                                        <i className="fs-4 bi-people"></i> <span className="ms-1 d-none d-sm-inline">Customers</span> </a>
+
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-tag-fill pe-2"></i>
+                                        Manage Labels
+                                    </a>
+                                </li>
+
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-basket-fill pe-2"></i>
+                                        Manage Batches
+                                    </a>
+                                </li>
+
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-people-fill pe-2"></i>
+                                        Manage Users
+                                    </a>
+                                </li>
+
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-list-columns-reverse pe-2"></i>
+                                        Manage Roles
+                                    </a>
+                                </li>
+
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-diagram-3-fill pe-2"></i>
+                                        Manage Categories
+                                    </a>
+                                </li>
+
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-person-workspace pe-2"></i>
+                                        Manage Beekeepers
+                                    </a>
+                                </li>
+
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-geo-alt-fill pe-2"></i>
+                                        Manage Regions
+                                    </a>
+                                </li>
+
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-envelope-at-fill pe-2"></i>
+                                        Manage Emails
+                                    </a>
+                                </li>
+
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-envelope-slash-fill pe-2"></i>
+                                        Invalid Codes
+                                    </a>
+                                </li>
+
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-file-earmark-bar-graph pe-2"></i>
+                                        Reports
+                                    </a>
+                                </li>
+
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-gear-fill pe-2"></i>
+                                        Manage Site Settings
+                                    </a>
+                                </li>
+
+                                <li className='py-2'>
+                                    <a href="" className='text-decoration-none text-light' style={hoverStyle}>
+                                        <i className="bi bi-box-arrow-right pe-2"></i>
+                                        Logout
+                                    </a>
                                 </li>
                             </ul>
-                            <hr/>
-                                <div className="dropdown pb-4">
-                                    <a href="#" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" className="rounded-circle"/>
-                                            <span className="d-none d-sm-inline mx-1">loser</span>
-                                    </a>
-                                    <ul className="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                                        <li><a className="dropdown-item" href="#">New project...</a></li>
-                                        <li><a className="dropdown-item" href="#">Settings</a></li>
-                                        <li><a className="dropdown-item" href="#">Profile</a></li>
-                                        <li>
-                                            <hr className="dropdown-divider"/>
-                                        </li>
-                                        <li><a className="dropdown-item" href="#">Sign out</a></li>
-                                    </ul>
-                                </div>
+                            <hr />
                         </div>
                     </div>
-                    <div className="col py-3">
+                    <div className="col text-center">
+                        <Navbar />
+                        <Dashboard></Dashboard>
                     </div>
                 </div>
             </div>
