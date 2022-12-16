@@ -1,13 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ApexChart from './ApexChart';
 
-export default function Dashboard() {
+export default function Dashboard(props) {
     return (
         <>
-            <h3>Dashboard</h3>
+            <div className="text-center mt-4">
+                <h1 className="text-primary">Dashboard</h1>
+                <h3 className="text-success">View Stats</h3>
+                <ApexChart />
+            </div>
         </>
     )
-}
-if (document.getElementById('dashboard')) {
-    ReactDOM.render(<Dashboard />, document.getElementById('dashboard'));
 }

@@ -59,11 +59,18 @@ If you have chosen to opt for the auth package the you must go inside `views/lay
 #### In the end run the `npm install && npm run build` to build your assets and start your local server.
 ---
 
+
+### Follow the steps to install bootstrap 5 with vite in your laravel app
++ Install the laravel ui by using `composer require laravel/ui` .
++ Now we will install react by using `php artisan ui react`. Similarly to bootstrap, you can also give the `--auth` flag to install the authentication scaffolfing made in react
++ Make sure you have node version 18 or above at this point in time before you run `npm install && npm run dev` .
+---
+
 ## Installing laravel mix 
 + Inside you main root directory of your laravel app install the laravel mix `npm init -y` and then run `npm install laravel-mix --save-dev` .
 + Create a Mix Configuration File `touch webpack.mix.js` .
 + Define Your Compilation.
-+ Vite may be buggy when it comes to compiling both react and bootstrap, so for that reason I opted to use use webpack to compile JavaScript.
++ Vite may be buggy when it comes to compiling both react and bootstrap, so for that reason I opted to use the `.js` as the extension and use webpack to compile the JavaScript.
 ```
 // webpack.mix.js
 
@@ -145,6 +152,50 @@ Inside welcome.blade.php
 </body>
 </html>
 ```
+
+## Important
+
+How to set up a react project directly inside laravel after installing laravel mix, node js, react js, bootstrap and laravel ui with all its configurations
++ Make a components folder inside resources/js
++ Make an App.jsx file and create the root element
+
+```
+import React from 'react';
+import Navbar from './Navbar';
+export default function App() {
+  return (
+    <>
+      <Navbar></Navbar>
+    </>
+  )
+}
+```
++ Make a blade file and call this root element as id in the div
++ Inside resources/js/app.js import the App component
+
+```
+import "./components/App";
+```
+
+```
+import React from 'react';
+import App from './App';
+import { createRoot } from 'react-dom/client';
+
+export default function Index() {
+    return (
+        <>
+            <App />
+        </>
+    );
+}
+
+const container = document.getElementById('root');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<Index tab="home" />);
+```
++ Make an index.jsx file to render your App.jsx component
++ Call all your other components inside the App.jsx file
 
 ---
 
